@@ -1,0 +1,11 @@
+!assets
+!assets/css
+!assets/img
+!assets/js
+!assets/scss
+
+
+# Ignoring files
+./node_modules
+./dist
+./build
