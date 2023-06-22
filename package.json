@@ -1,0 +1,20 @@
+{
+  "name": "ppw-final-project",
+  "version": "1.0.0",
+  "description": "A Final Project of Task School subject Pengenalan Perancangan Web",
+  "scripts": {
+    "start": "vite",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "https://github.com/nsmle/ppw-fp-23",
+  "author": "Fiki Pratama <fikiproductionofficial@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "5.3"
+  },
+  "devDependencies": {
+    "vite": "^4.3.9"
+  }
+}
