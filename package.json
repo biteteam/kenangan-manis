@@ -6,8 +6,36 @@
     "start": "vite",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "homepage": "https://fp-ppw-23.fiki.tech",
   "repository": "https://github.com/nsmle/ppw-fp-23",
-  "author": "Fiki Pratama <fikiproductionofficial@gmail.com>",
+  "author": "Fiki Pratama <fikiproductionofficial@gmail.com> (https://fiki.tech)",
+  "contributors": [
+    {
+      "name": "Fiki Pratama (22.12.2551)",
+      "email": "fikipratama@students.amikom.ac.id",
+      "url": "https://fotomhs.amikom.ac.id/2022/22_12_2551.jpg"
+    },
+    {
+      "name": "Muhammad Amikatuzzain (22.12.2560)",
+      "email": "m.amikatuzzain@students.amikom.ac.id",
+      "url": "https://fotomhs.amikom.ac.id/2022/22_12_2560.jpg"
+    },
+    {
+      "name": "Wahyu Muhammad Arby (22.12.2553)",
+      "email": "wahyum.arby@students.amikom.ac.id",
+      "url": "https://fotomhs.amikom.ac.id/2022/22_12_2553.jpg"
+    },
+    {
+      "name": "Muhamad Patih Hidayat (22.12.2546)",
+      "email": "patihh@students.amikom.ac.id",
+      "url": "https://fotomhs.amikom.ac.id/2022/22_12_2546.jpg"
+    },
+    {
+      "name": "Sabib Prastio (22.12.2598)",
+      "email": "sabibprastio@students.amikom.ac.id",
+      "url": "https://fotomhs.amikom.ac.id/2022/22_12_2546.jpg"
+    }
+  ],
   "license": "MIT",
   "private": true,
   "dependencies": {

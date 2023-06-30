@@ -1,8 +1,8 @@
-!assets
-!assets/css
-!assets/img
-!assets/js
-!assets/scss
+# UnIgnore directories
+!src/img
+!src/js
+!src/css
+!src/scss
 
 
 # Ignoring files
