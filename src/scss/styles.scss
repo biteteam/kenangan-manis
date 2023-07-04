@@ -38,37 +38,6 @@ body {
     font-weight: 700;
 }
 
-.mt-5s {
-    margin-top: 5%;
-}
-
-.mt-10s {
-    margin-top: 10%;
-}
-
-.mt-20s {
-    margin-top: 20%;
-}
-
-.mt-30s {
-    margin-top: 30%;
-}
-
-.py-10s {
-    padding-top: 10%;
-    padding-bottom: 10%;
-}
-
-.py-20s {
-    padding-top: 20%;
-    padding-bottom: 20%;
-}
-
-.py-30s {
-    padding-top: 30%;
-    padding-bottom: 30%;
-}
-
 .pml-12 {
     margin-left: -12px;
     padding-left: 12px;
@@ -151,8 +120,19 @@ body {
 .bg-coffee-random {
     background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.45)),
         url("https://source.unsplash.com/1600x900/?coffee");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
-    background-position: center top;
+}
+
+.bg-glass {
+    background: rgba(95, 170, 177, 0.45);
+    // box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .text-sm-16px {
@@ -278,30 +258,6 @@ body {
         max-width: 50%;
         color: $primary-600;
         font-weight: 400;
-    }
-
-    .text-sm-22px {
-        font-size: 22px;
-    }
-
-    .mt-md-5s {
-        margin-top: 5%;
-    }
-
-    .mt-md-10s {
-        margin-top: 10%;
-    }
-
-    .mt-md-20s {
-        margin-top: 20%;
-    }
-
-    .mt-md-30s {
-        margin-top: 30%;
-    }
-
-    .w-md-50 {
-        width: 50% !important;
     }
 }
 

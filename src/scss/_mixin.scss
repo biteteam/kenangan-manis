@@ -63,6 +63,13 @@
     }
 }
 
+// margin top percent
+@for $i from 1 through 100 {
+    .mt-#{$i}s {
+        margin-top: #{$i + "%"};
+    }
+}
+
 @include media-breakpoint-up(sm) {
     // padding y
     @for $i from 1 through 100 {
@@ -126,6 +133,13 @@
     @for $i from 1 through 100 {
         .text-md-#{$i}px {
             font-size: #{$i + "px"};
+        }
+    }
+
+    // margin top percent
+    @for $i from 1 through 100 {
+        .mt-md-#{$i}s {
+            margin-top: #{$i + "%"};
         }
     }
 }
