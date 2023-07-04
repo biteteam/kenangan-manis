@@ -36,8 +36,6 @@
 .floating-on-top {
     @extend .sm-mt-64;
     position: relative;
-    transition-timing-function: ease-in-out;
-    transition-delay: 1s;
     background-color: rgba(242, 249, 249, 0.5);
 }
 
@@ -46,8 +44,6 @@
     @extend .sm-mt-64;
     @extend .blur-15;
     box-shadow: 0 4px 4px -2px #00000014;
-    transition-timing-function: ease-in-out;
-    transition-delay: 1s;
     background-color: rgba(242, 249, 249, 0.8);
 }
 
