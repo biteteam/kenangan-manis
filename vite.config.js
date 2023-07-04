@@ -7,6 +7,18 @@ export default {
   root: path.resolve(__dirname, 'src'),
   build: {
     outDir: path.resolve(__dirname, 'dist'),
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, 'src/index.html'),
+        about: path.resolve(__dirname, 'src/about.html'),
+        product: path.resolve(__dirname, 'src/product.html'),
+        coffee: path.resolve(__dirname, 'src/coffee.html'),
+        login: path.resolve(__dirname, 'src/login.html'),
+        register: path.resolve(__dirname, 'src/register.html'),
+        // ...
+        // List all files you want in your build
+      }
+    }
   },
   resolve: {
     alias: {
