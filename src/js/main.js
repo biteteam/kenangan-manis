@@ -2,7 +2,7 @@
 import '../scss/styles.scss'
 import * as bootstrap from 'bootstrap'
 
-window.scrollTo(0, 0);
+// window.scrollTo(0, 0);
 
 // Hanling Active Links
 const navbar = document.querySelector("nav");
