@@ -5,6 +5,7 @@
 
 @import "~bootstrap/scss/bootstrap";
 @import "mixin";
+@import "utilities";
 @import "class/navbar";
 @import "class/button";
 @import "class/card";
@@ -100,7 +101,7 @@ body {
     color: $primary;
 }
 
-.navbar-nav .nav-link.active {
+.navbar .navbar-nav .nav-link.active {
     color: $primary-500;
 }
 
@@ -148,7 +149,7 @@ body {
 }
 
 .bg-coffee-random {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.45)),
         url("https://source.unsplash.com/1600x900/?coffee");
     background-size: cover;
     background-position: center top;

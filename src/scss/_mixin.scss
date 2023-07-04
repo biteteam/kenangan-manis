@@ -49,8 +49,12 @@
     }
 }
 
-
-
+// opacity
+@for $i from 1 through 100 {
+    .opacity-#{$i} {
+        opacity: #{$i + "%"};
+    }
+}
 
 @include media-breakpoint-up(sm) {
     // padding y
@@ -78,7 +82,7 @@
             }
         }
     }
-    
+
     // margin top
     @for $i from 1 through 100 {
         .md-md-#{$i} {
@@ -101,6 +105,13 @@
             .h-md-#{$i} {
                 height: #{$i + "%"} !important;
             }
+        }
+    }
+
+    // opacity
+    @for $i from 1 through 100 {
+        .opacity-md-#{$i} {
+            opacity: #{$i + "%"};
         }
     }
 }

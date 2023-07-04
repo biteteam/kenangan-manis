@@ -13,7 +13,7 @@ navLinks?.forEach((navLink) => {
     }
 })
 
-const navbarInitTransparentOnPage = ["", "/", "/index.html", "/login.html", "/register.html"];
+const navbarInitTransparentOnPage = ["", "/", "/index.html", "/about.html", "/menu.html", "/login.html", "/register.html"];
 if (!navbarInitTransparentOnPage.includes(location.pathname)) {
     navbar?.classList.add("navbar-shadow")
 }
@@ -21,14 +21,15 @@ if (!navbarInitTransparentOnPage.includes(location.pathname)) {
 const floatingTop = document.querySelector(".floating-on-top");
 
 const navbarAction = (oldScrollY, scrollY) => {
-    !floatingTop && navbar?.classList.add("navbar-shadow")
-
+    (!floatingTop && location.pathname !== "/about.html") &&
+        navbar?.classList.add("navbar-shadow")
 
     if (navbarInitTransparentOnPage.includes(location.pathname) && !floatingTop) {
+        const Y = location.pathname == "/about.html" ? 80 : 30;
         if (oldScrollY < scrollY) {
-            if (scrollY > 30) navbar?.classList.add("navbar-shadow")
+            if (scrollY > Y) navbar?.classList.add("navbar-shadow")
         } else {
-            if (scrollY < 30) {
+            if (scrollY < Y) {
                 navbar?.classList.remove("navbar-shadow")
             }
         }
@@ -36,13 +37,17 @@ const navbarAction = (oldScrollY, scrollY) => {
     }
 
 
-    if (floatingTop) {
+    if (floatingTop && navbarInitTransparentOnPage.includes(location.pathname)) {
         if (oldScrollY < scrollY) {
+            if (scrollY > 2) navbar?.classList.add("navbar-shadow")
+
+
             if (scrollY > 50) {
                 floatingTop.classList.replace("floating-on-top", "floating-on-top-now")
                 floatingTop.nextElementSibling?.classList.add("sm-mt-50", "gap-to-header")
             }
         } else {
+            if (scrollY < 2) navbar?.classList.remove("navbar-shadow")
             if (scrollY < 50) {
                 floatingTop.classList.replace("floating-on-top-now", "floating-on-top")
                 floatingTop.nextElementSibling?.classList.remove("sm-mt-50", "gap-to-header")
