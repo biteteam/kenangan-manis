@@ -1,24 +1,24 @@
 // Overide Navbar Classes Bootstrap
 
-.navbar-toggler {
+.navbar .navbar-toggler {
     border: none;
     color: transparent;
 }
 
-.navbar-toggler:hover {
-    background-color: $primary-50;
+.navbar .navbar-toggler:hover {
+    background-color: rgba(242, 249, 249, 0.8);
 }
 
-.navbar-toggler-icon {
+.navbar .navbar-toggler-icon {
     @extend .navbar-toggler-icon;
     background-size: 80%;
 }
 
-.navbar-toggler-icon:focus {
+.navbar .navbar-toggler-icon:focus {
     outline: none !important;
 }
 
-.navbar-toggler-icon:active {
+.navbar .navbar-toggler-icon:active {
     scale: 0.8;
 }
 
@@ -27,24 +27,47 @@
     backdrop-filter: blur(15px);
 }
 
+.navbar-init-transparent {
+    @extend .navbar;
+    background-color: none !important;
+}
+
+.navbar-init-transparent .navbar-brand span {
+    color: #5faab1 !important;
+}
+
+.navbar-init-transparent .navbar-expand .nav-link {
+    color: $gray-400;
+}
+
+.navbar-init-transparent .navbar-expand .nav-link.active {
+    color: #5faab1 !important;
+}
+
+.navbar-init-transparent .navbar-expand .nav-link:hover {
+    color: $primary-400 !important;
+}
+
+.navbar-init-transparent .navbar-toggler-icon {
+    background-image: $navbar-dark-toggler-icon-bg !important;
+}
+
 .navbar-shadow {
     @extend .blur-15;
     box-shadow: 0 0 4px 2px #00000014;
     background: rgba(255, 255, 255, 0.8);
-}
 
-.floating-on-top {
-    @extend .sm-mt-64;
-    position: relative;
-    background-color: rgba(242, 249, 249, 0.5);
-}
+    .navbar-expand .nav-link {
+        color: $gray-600 !important;
+    }
 
-.floating-on-top-now {
-    @extend .fixed-top;
-    @extend .sm-mt-64;
-    @extend .blur-15;
-    box-shadow: 0 4px 4px -2px #00000014;
-    background-color: rgba(242, 249, 249, 0.8);
+    .navbar-expand .nav-link.active {
+        color: $primary-500 !important;
+    }
+
+    .navbar-toggler .navbar-toggler-icon {
+        background-image: $navbar-light-toggler-icon-bg !important;
+    }
 }
 
 .navbar {
@@ -54,6 +77,26 @@
     --#{$prefix}navbar-padding-y: #{$navbar-padding-sm-y};
 
     padding: var(--#{$prefix}navbar-padding-y) var(--#{$prefix}navbar-padding-x);
+}
+
+.floating-on-top {
+    @extend .sm-mt-64;
+    position: relative;
+    background-color: rgba(242, 249, 249, 0.5);
+    z-index: 1;
+}
+
+.floating-on-top-now {
+    @extend .fixed-top;
+    @extend .sm-mt-64;
+    @extend .blur-15;
+    box-shadow: 0 4px 4px -2px #00000014;
+    background-color: rgba(242, 249, 249, 0.8);
+    z-index: 1;
+}
+
+.offcanvas {
+    z-index: 999999;
 }
 
 // Overide bootstrap when screen greather than sm
