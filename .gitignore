@@ -9,3 +9,5 @@
 node_modules
 dist
 build
+src/scss/styles.css
+src/scss/styles.css.map
