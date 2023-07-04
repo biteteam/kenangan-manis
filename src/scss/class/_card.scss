@@ -1,0 +1,6 @@
+.card {
+    @extend .card;
+    border: none !important;
+    box-shadow: rgba(11, 43, 158, 0.15) 0px 6px 20px -6px;
+    border-radius: 15px;
+}

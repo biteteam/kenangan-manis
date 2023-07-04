@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kenangan Manis - Coffee Time Health Benefits</title>
+  <title>Daftar - Kenangan Manis</title>
   <meta name="description" content="Kenangan Manis adalah ....">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#ffffff">
@@ -46,7 +46,7 @@
               </li>
             </ul>
           </div>
-          <a href="login.html" class="btn btn-primary">Login</a>
+          <a href="login.html" class="btn btn-primary">login</a>
         </div>
 
         <button class="navbar-toggler offcanvas-end d-sm-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
@@ -87,42 +87,47 @@
 
   <!-- Content -->
   <main>
-    <section class="banner">
-      <div class="gap-to-header">
-        <div class="position-relative min-vh-100">
-          <div class="container align-items-center justify-content-center">
-            <div class="mx-auto d-block d-md-none"
-              style="margin-top: 50px; margin-bottom: 50px; background: rgba(221, 239, 240, .6); -webkit-backdrop-filter: blur(15px); backdrop-filter: blur(15px);height: 200px; width: 200px; border-radius: 50%;">
-              <img class="position-absolute" style="top: 5%; right: 12%;" src="./assets/img/3d-coffee-mug.png" width="200" height="auto" alt="Mug Coffe">
+    <div class="mb-5 d-flex align-items-center justify-content-center mt-20s mt-md-10s">
+      <div class="card w-90 w-md-40 p-3">
+        <div class="card-body">
+          <h5 class="card-title text-center h4 font-bold text-primary-500 mt-2 mb-3">Daftar</h5>
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Nama</label>
+              <input type="text" class="form-control" id="name">
             </div>
-            <div class="banner-slug">
-              <h1 class="font-medium text-primary">Coffee Time<br>
-                <span class="text-uppercase font-bold text-primary-500">Health Benefits</span>
-              </h1>
-              <p class="mt-1 mt-md-2 text-sm-16px text-sm-22px">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore iusto tenetur culpa, nisi illum
-                odio ducimus. Fuga ipsa quidem laborum dignissimos.
-              </p>
-              <div class="mt-2 mt-md-5 d-flex flex-column flex-md-row gap-1 gap-md-2">
-                <a href="login.html" class="btn btn-lg btn-primary py-1 py-md-3 px-md-4 w-sm-full">Login</a>
-                <a href="product.html" class="btn btn-lg btn-primary py-1 py-md-3 px-md-4 w-sm-full">Lihat Produk Kami</a>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email">
+            </div>
+            <div class="mb-3">
+              <label for="username" class="form-label">Username</label>
+              <div class="input-group">
+                <span class="input-group-text" id="basic-addon1">@</span>
+                <input type="text" class="form-control" aria-label="Username" id="username" aria-describedby="basic-addon1">
               </div>
             </div>
-            <div class="position-absolute d-none d-md-block"
-              style="background: rgba(221, 239, 240, .6); -webkit-backdrop-filter: blur(15px); backdrop-filter: blur(15px);top: 19%; right: 9%; height: 450px; width: 450px; border-radius: 50%;">
-              <img class="position-absolute" style="top: 5%; right: 12%;" src="./assets/img/3d-coffee-mug.png" width="450" height="auto" alt="Mug Coffe">
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password">
             </div>
-          </div>
+            <div class="mb-3">
+              <label for="re-password" class="form-label">Ulangi Password</label>
+              <input type="password" class="form-control" id="re-password">
+            </div>
+            <a class="text-xs text-decoration-none" href="login.html">Sudah Punya akun?</a>
+            <div class="mt-4 mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="agreement">
+              <label class="form-check-label text-xs" for="agreement">Dengan mendaftar, Saya setuju untuk mematuhi <a class="text-decoration-none"
+                  href="#terms-of-service">Ketentuan
+                  Layanan</a> Dan <a class="text-decoration-none" href="#privacy-policy">Kebijakan privasi</a> KenanganManis.
+              </label>
+            </div>
+            <button type="submit" class="btn btn-md btn-primary w-100">Register</button>
+          </form>
         </div>
       </div>
-    </section>
-
-
-
-    <div class="min-vh-100">
-      <h1>Source src/index.html</h1>
-      <button class="btn btn-primary">Login</button>
     </div>
-
   </main>
 
   <!-- Footer -->
@@ -154,7 +159,7 @@
               <a href="about.html" class="text-reset link-primary-200 text-decoration-none align-top">Tentang Kami</a>
             </p>
             <p>
-              <a href="login.html" class="text-reset link-primary-200 text-decoration-none align-top">Login/Register</a>
+              <a href="login.html" class="text-reset link-primary-200 text-decoration-none align-top">Login</a>
             </p>
           </div>
 

@@ -4,40 +4,184 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kenangan Manis - Halaman XXXXX</title>
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap" rel="stylesheet" />
-
-  <!-- Feather Icons -->
-  <script src="https://unpkg.com/feather-icons"></script>
-
-  <!-- BS JS -->
-  <script type="module" src="./../assets/js/main.js"></script>
+  <title>{halaman} - Kenangan Manis</title>
+  <meta name="description" content="Kenangan Manis adalah ....">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/favicon/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/site.webmanifest">
+  <script type="module" src="/js/main.js"></script>
+  <!-- Font Awesome Kits -->
+  <script src="https://kit.fontawesome.com/ded8f6b2bd.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <!-- Header -->
   <header>
+    <nav class="navbar fixed-top">
+      <div class="container d-flex">
+
+        <a class="navbar-brand" href="/" aria-label="BRAND">
+          <img height="32" width="32" src="/assets/svg/brand-coloris.svg" alt="BRAND">
+          <span class="font-semibold text-primary-500">KenanganManis</span>
+        </a>
+
+        <div class="w-75 d-none d-lg-flex">
+          <div class="navbar-expand mx-auto">
+            <ul class="navbar-nav gap-4">
+              <li class="nav-item">
+                <a class="nav-link" href="/">Beranda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="product.html">Produk</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="coffee.html">Kopi Pilihan </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">Tentang Kami</a>
+              </li>
+            </ul>
+          </div>
+          <a href="login.html" class="btn btn-primary">Login</a>
+        </div>
+
+        <button class="navbar-toggler offcanvas-end d-sm-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="offcanvas offcanvas-end min-vh-100" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header pb-0 mb-0">
+            <button type="button" class="btn-close position-absolute" style="right: 20px;" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <a class="navbar-brand w-25" href="/" aria-label="BRAND">
+              <img height="32" width="32" src="/assets/svg/brand-coloris.svg" alt="BRAND">
+              <span class="font-semibold text-primary-500">KenanganManis</span>
+            </a>
+          </div>
+          <div class="offcanvas-body pt-0 mt-2">
+            <a href="login.html" class="btn btn-primary w-100 my-2">Login</a>
+            <hr class="hr" />
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link" href="/">Beranda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="product.html">Produk</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="coffee.html">Kopi Pilihan</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">Tentang Kami</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
   </header>
 
-  <!-- Main Content -->
+  <!-- Content -->
   <main>
-    <div class="container py-4 px-3 mx-auto">
-      <h1>Hello, Bootstrap and Vite!</h1>
-      <button class="btn btn-primary">Primary button</button>
+    <div class="container">
+      <h1>Write docs Here</h1>
+      <button class="btn btn-primary">Click Me</button>
     </div>
+
   </main>
 
   <!-- Footer -->
-  <footer>
-  </footer>
+  <footer class="text-center text-lg-start bg-primary text-white">
+    <section class="p-4 border-top">
+      <div class="container text-center text-md-start mt-5">
+        <div class="row mt-3">
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <h6 class="fw-bold lead mb-4">
+              <img class="text-danger" height="32" width="32" src="/assets/svg/brand-light.svg" alt="BRAND">
+              <span>KenanganManis</span>
+            </h6>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt numquam doloremque sapiente facere maxime nemo et culpa, dolorum in fuga.
+            </p>
+          </div>
 
-  <!-- Feather Icons -->
-  <script>
-    feather.replace();
-  </script>
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold mb-4">
+              Sitemap
+            </h6>
+            <p>
+              <a href="product.html" class="text-reset link-primary-200 text-decoration-none align-top">Produk</a>
+            </p>
+            <p>
+              <a href="coffee.html" class="text-reset link-primary-200 text-decoration-none align-top">Kopi Pilihan</a>
+            </p>
+            <p>
+              <a href="about.html" class="text-reset link-primary-200 text-decoration-none align-top">Tentang Kami</a>
+            </p>
+            <p>
+              <a href="login.html" class="text-reset link-primary-200 text-decoration-none align-top">Login/Register</a>
+            </p>
+          </div>
+
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold mb-4">
+              Sosmed
+            </h6>
+            <p class="text-center text-md-start">
+              <a href="#!" class="link-primary-200 text-reset d-md-flex align-items-center text-decoration-none">
+                <i class="fa-brands fa-facebook me-2 text-primary-700 bg-primary-100 p-1 rounded"></i>
+                <span>Facebook</span>
+              </a>
+            </p>
+            <p class="text-center text-md-start">
+              <a href="#!" class="link-primary-200 text-reset d-md-flex align-items-center text-decoration-none">
+                <i class="fa-brands fa-twitter me-2 text-primary-700 bg-primary-100 p-1 rounded"></i>
+                <span>Twitter</span>
+              </a>
+            </p>
+            <p class="text-center text-md-start">
+              <a href="#!" class="link-primary-200 text-reset d-md-flex align-items-center text-decoration-none">
+                <i class="fa-brands fa-instagram me-2 text-primary-700 bg-primary-100 p-1 rounded"></i>
+                <span>Instagram</span>
+              </a>
+            </p>
+            <p class="text-center text-md-start">
+              <a href="https://google.com/search?q=kopi+kenangan+manis" class="link-primary-200 text-reset d-md-flex align-items-center text-decoration-none">
+                <i class="fa-brands fa-google me-2 text-primary-700 bg-primary-100 p-1 rounded"></i>
+                <span>Google</span>
+              </a>
+            </p>
+          </div>
+
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <h6 class="text-uppercase fw-bold mb-4">Kontak</h6>
+            <p class="text-center mx-auto text-md-start d-block d-md-flex align-items-md-start">
+              <i class="fas fa-map-pin me-2 text-primary-700 bg-primary-100 py-1 px-2 rounded mt-1"></i>
+              <span>Jl. Ring Road Utara, Kec. Depok, Sleman, DIY 55281, ID</span>
+            </p>
+            <p class="text-center mx-auto text-md-start d-block d-md-flex align-items-top">
+              <i class="fas fa-envelope me-2 text-primary-700 bg-primary-100 p-1 rounded"></i>
+              <span>info@kenanganmanis.com</span>
+            </p>
+            <p class="text-center mx-auto text-md-start d-block d-md-flex align-items-top">
+              <i class="fas fa-phone me-2 text-primary-700 bg-primary-100 p-1 rounded"></i>
+              <span>+62 823 8888 8888</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+      © 2023 Copyright:
+      <a class="text-reset fw-bold text-decoration-none" href="/">KenanganManis</a>
+    </div>
+  </footer>
 </body>
 
 </html>

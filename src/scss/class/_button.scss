@@ -1,0 +1,49 @@
+.btn {
+    @extend .btn;
+    @extend .font-medium;
+}
+
+.btn-primary {
+    @extend .btn-primary;
+    background-color: $primary;
+    color: $gray-100;
+}
+
+.btn-primary:hover {
+    @extend .btn-primary;
+    background-color: $primary-300;
+    color: white !important;
+}
+
+.btn-primary:active {
+    background-color: $primary-400;
+    color: white !important;
+    scale: 0.98;
+}
+
+.btn-close:hover {
+    background-color: $primary-50;
+}
+
+.btn-close:active {
+    scale: 0.8;
+}
+
+.navbar .btn-close {
+    scale: 0.9;
+}
+
+.btn-md {
+    @extend .btn-lg;
+    font-size: medium;
+}
+
+.btn-lg {
+    font-size: 1.1rem;
+}
+
+@include media-breakpoint-up(sm) {
+    .btn-md {
+        font-size: 1.25rem;
+    }
+}
