@@ -1,0 +1,106 @@
+// padding y
+@for $i from 1 through 100 {
+    .sm-py-#{$i} {
+        padding-top: #{$i + "px"};
+        padding-bottom: #{$i + "px"};
+    }
+}
+
+// padding x
+@for $i from 1 through 100 {
+    .sm-px-#{$i} {
+        padding-left: #{$i + "px"};
+        padding-right: #{$i + "px"};
+    }
+}
+
+// padding y percent
+@for $i from 1 through 100 {
+    @if $i % 5 == 0 {
+        .py-#{$i}s {
+            padding-top: #{$i + "%"};
+            padding-bottom: #{$i + "%"};
+        }
+    }
+}
+
+// margin top
+@for $i from 1 through 100 {
+    .sm-mt-#{$i} {
+        margin-top: #{$i + "px"};
+    }
+}
+
+// width
+@for $i from 1 through 100 {
+    @if $i % 5 == 0 {
+        .w-#{$i} {
+            width: #{$i + "%"} !important;
+        }
+    }
+}
+
+// height
+@for $i from 1 through 100 {
+    @if $i % 5 == 0 {
+        .h-#{$i} {
+            height: #{$i + "%"} !important;
+        }
+    }
+}
+
+
+
+
+@include media-breakpoint-up(sm) {
+    // padding y
+    @for $i from 1 through 100 {
+        .md-py-#{$i} {
+            padding-top: #{$i + "px"};
+            padding-bottom: #{$i + "px"};
+        }
+    }
+
+    // padding x
+    @for $i from 1 through 100 {
+        .md-px-#{$i} {
+            padding-left: #{$i + "px"};
+            padding-right: #{$i + "px"};
+        }
+    }
+
+    // padding y percent
+    @for $i from 1 through 100 {
+        @if $i % 5 == 0 {
+            .py-md-#{$i}s {
+                padding-top: #{$i + "%"};
+                padding-bottom: #{$i + "%"};
+            }
+        }
+    }
+    
+    // margin top
+    @for $i from 1 through 100 {
+        .md-md-#{$i} {
+            margin-top: #{$i + "px"};
+        }
+    }
+
+    // width
+    @for $i from 1 through 100 {
+        @if $i % 5 == 0 {
+            .w-md-#{$i} {
+                width: #{$i + "%"} !important;
+            }
+        }
+    }
+
+    // height
+    @for $i from 1 through 100 {
+        @if $i % 5 == 0 {
+            .h-md-#{$i} {
+                height: #{$i + "%"} !important;
+            }
+        }
+    }
+}

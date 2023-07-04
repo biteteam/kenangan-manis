@@ -1,0 +1,80 @@
+// Overide Navbar Classes Bootstrap
+
+.navbar-toggler {
+    border: none;
+    color: transparent;
+}
+
+.navbar-toggler:hover {
+    background-color: $primary-50;
+}
+
+.navbar-toggler-icon {
+    @extend .navbar-toggler-icon;
+    background-size: 80%;
+}
+
+.navbar-toggler-icon:focus {
+    outline: none !important;
+}
+
+.navbar-toggler-icon:active {
+    scale: 0.8;
+}
+
+.blur-15 {
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+}
+
+.navbar-shadow {
+    @extend .blur-15;
+    box-shadow: 0 0 4px 2px #00000014;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.floating-on-top {
+    @extend .sm-mt-64;
+    position: relative;
+    transition-timing-function: ease-in-out;
+    transition-delay: 1s;
+    background-color: rgba(242, 249, 249, 0.5);
+}
+
+.floating-on-top-now {
+    @extend .fixed-top;
+    @extend .sm-mt-64;
+    @extend .blur-15;
+    box-shadow: 0 4px 4px -2px #00000014;
+    transition-timing-function: ease-in-out;
+    transition-delay: 1s;
+    background-color: rgba(242, 249, 249, 0.8);
+}
+
+.navbar {
+    @extend .navbar;
+    // scss-docs-start navbar-css-vars
+    --#{$prefix}navbar-padding-x: #{if($navbar-padding-sm-x == null, 0, $navbar-padding-sm-x)};
+    --#{$prefix}navbar-padding-y: #{$navbar-padding-sm-y};
+
+    padding: var(--#{$prefix}navbar-padding-y) var(--#{$prefix}navbar-padding-x);
+}
+
+// Overide bootstrap when screen greather than sm
+@include media-breakpoint-up(sm) {
+    .navbar {
+        // scss-docs-start navbar-css-vars
+        --#{$prefix}navbar-padding-x: #{if($navbar-padding-x == null, 0, $navbar-padding-x)};
+        --#{$prefix}navbar-padding-y: #{$navbar-padding-y};
+
+        padding: var(--#{$prefix}navbar-padding-y) var(--#{$prefix}navbar-padding-x);
+    }
+
+    .floating-on-top {
+        margin-top: 68px;
+    }
+
+    .floating-on-top-now {
+        margin-top: 68px;
+    }
+}

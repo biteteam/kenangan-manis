@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kenangan Manis - Coffee Time Health Benefits</title>
+  <title>Product - Kenangan Manis</title>
   <meta name="description" content="Kenangan Manis adalah ....">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#ffffff">
@@ -86,41 +86,71 @@
   </header>
 
   <!-- Content -->
-  <main>
-    <section class="banner">
-      <div class="gap-to-header">
-        <div class="position-relative min-vh-100">
-          <div class="container align-items-center justify-content-center">
-            <div class="mx-auto d-block d-md-none"
-              style="margin-top: 50px; margin-bottom: 50px; background: rgba(221, 239, 240, .6); -webkit-backdrop-filter: blur(15px); backdrop-filter: blur(15px);height: 200px; width: 200px; border-radius: 50%;">
-              <img class="position-absolute" style="top: 5%; right: 12%;" src="./assets/img/3d-coffee-mug.png" width="200" height="auto" alt="Mug Coffe">
-            </div>
-            <div class="banner-slug">
-              <h1 class="font-medium text-primary">Coffee Time<br>
-                <span class="text-uppercase font-bold text-primary-500">Health Benefits</span>
-              </h1>
-              <p class="mt-1 mt-md-2 text-sm-16px text-sm-22px">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore iusto tenetur culpa, nisi illum
-                odio ducimus. Fuga ipsa quidem laborum dignissimos.
-              </p>
-              <div class="mt-2 mt-md-5 d-flex flex-column flex-md-row gap-1 gap-md-2">
-                <a href="login.html" class="btn btn-lg btn-primary py-1 py-md-3 px-md-4 w-sm-full">Login</a>
-                <a href="product.html" class="btn btn-lg btn-primary py-1 py-md-3 px-md-4 w-sm-full">Lihat Produk Kami</a>
-              </div>
-            </div>
-            <div class="position-absolute d-none d-md-block"
-              style="background: rgba(221, 239, 240, .6); -webkit-backdrop-filter: blur(15px); backdrop-filter: blur(15px);top: 19%; right: 9%; height: 450px; width: 450px; border-radius: 50%;">
-              <img class="position-absolute" style="top: 5%; right: 12%;" src="./assets/img/3d-coffee-mug.png" width="450" height="auto" alt="Mug Coffe">
-            </div>
+  <main class="min-vh-100">
+    <div class="floating-on-top sm-py-4 md-py-4">
+      <div class="d-flex justify-content-center">
+        <div class="row row-cols-3 row-cols-md-6 align-items-center text-center w-100 w-md-50 sm-py-5 md-py-10">
+          <div class="col">
+            <button onclick="redirect('#favorit')" type="button"
+              class="btn px-4 sm-py-5 md-py-10 text-primary-400 font-semibold text-decoration-none link-success">Favorit</button>
+          </div>
+          <div class="col">
+            <button onclick="redirect('#special')" type="button" href="#special"
+              class="btn px-4 sm-py-5 md-py-10 text-primary-400 font-semibold text-decoration-none link-success">Spesial</button>
+          </div>
+          <div class="col">
+            <button onclick="redirect('#combo')" type="button" href="#combo"
+              class="btn px-4 sm-py-5 md-py-10 text-primary-400 font-semibold text-decoration-none link-success">Combo</button>
+          </div>
+          <div class="col">
+            <button onclick="redirect('#best-seller')" type="button" href="#best-seller"
+              class="btn px-4 sm-py-5 md-py-10 text-primary-400 font-semibold text-decoration-none link-success">Terlaris</button>
+          </div>
+          <div class="col">
+            <button onclick="redirect('#food')" type="button" href="#food"
+              class="btn px-4 sm-py-5 md-py-10 text-primary-400 font-semibold text-decoration-none link-success">Makanan</button>
+          </div>
+          <div class="col">
+            <button onclick="redirect('#drink')" type="button" href="#drink"
+              class="btn px-4 sm-py-5 md-py-10 text-primary-400 font-semibold text-decoration-none link-success">Minuman</button>
           </div>
         </div>
+
       </div>
-    </section>
+    </div>
 
+    <div class="container">
+      <section class="d-flex flex-column my-2 pb-5" id="favorit">
+        <h3 class="mb-3">Favorit</h3>
+        <div class="d-flex row row-cols-1 row-cols-md-4" id="data-favorit"></div>
+      </section>
 
+      <section class="d-flex flex-column my-2 pb-5" id="special">
+        <h3 class="mb-3">Spesial</h3>
+        <div class="d-flex row row-cols-1 row-cols-md-4" id="data-special"></div>
+      </section>
 
-    <div class="min-vh-100">
-      <h1>Source src/index.html</h1>
-      <button class="btn btn-primary">Login</button>
+      <section class="d-flex flex-column my-2 pb-5" id="combo">
+        <h3 class="mb-3">Combo</h3>
+        <div class="d-flex row row-cols-1 row-cols-md-4" id="data-combo"></div>
+      </section>
+
+      <section class="d-flex flex-column my-2 pb-5" id="best-seller">
+        <h3 class="mb-3">Terlaris</h3>
+        <div class="d-flex row row-cols-1 row-cols-md-4" id="data-best-seller"></div>
+      </section>
+
+      <section class="d-flex flex-column my-2 pb-5" id="food">
+        <h3 class="mb-3">Makanan</h3>
+        <div class="d-flex row row-cols-1 row-cols-md-4" id="data-food"></div>
+      </section>
+
+      <section class="d-flex flex-column my-2 pb-5" id="drink">
+        <h3 class="mb-3">Minuman</h3>
+        <div class="d-flex row row-cols-1 row-cols-md-4" id="data-drink">
+
+        </div>
+      </section>
     </div>
 
   </main>
@@ -214,6 +244,143 @@
     </div>
   </footer>
 
+  <script>
+    const data = {};
+    data["favorit"] = [
+      {
+        name: "Burger",
+        description: "The Burger",
+        image: "https://source.unsplash.com/1200x700/?burger",
+        price: "30.000"
+      }, {
+        name: "Kebab",
+        description: "The Kebab",
+        image: "https://source.unsplash.com/1200x700/?kebab",
+        price: "22.000"
+      }
+      , {
+        name: "Sosis",
+        description: "The Sosis",
+        image: "https://source.unsplash.com/1200x700/?sausage",
+        price: "12.000"
+      }, {
+        name: "Takoyaki",
+        description: "The Takoyaki",
+        image: "https://source.unsplash.com/1200x700/?takoyaki",
+        price: "42.000"
+      }, {
+        name: "Ramen",
+        description: "The Ramen Series",
+        image: "https://source.unsplash.com/1200x700/?ramen",
+        price: "27.000"
+      }, {
+        name: "Spaghetti",
+        description: "The Italiano Spaghetti",
+        image: "https://source.unsplash.com/1200x700/?spaghetti",
+        price: "64.000"
+      }, {
+        name: "Sate Kambing",
+        description: "Sate Kambing Madura",
+        image: "https://source.unsplash.com/1200x700/?sate",
+        price: "32.000"
+      }, {
+        name: "Seblak",
+        description: "Seblak Jontor",
+        image: "https://source.unsplash.com/1200x700/?seblak",
+        price: "17.000"
+      }
+    ]
+    data["special"] = data["favorit"]
+    data["combo"] = data["favorit"]
+    data["bestSeller"] = data["favorit"]
+    data["food"] = data["favorit"]
+    data["drink"] = data["favorit"]
+    const sectionLists = ["favorit", "special", "combo", "best-seller", "food", "drink"]
+
+    const makeCard = (data, reRandom = false) => {
+      const node = document.createElement("div");
+      node.classList.add("col", "mb-4")
+      node.innerHTML = `
+          <div class="card w-100">
+            <img class="card-img-top" src="${data.image + (!reRandom ? "-food-" + Math.random().toString().charAt(2) : "-" + Math.random().toString().charAt(2) + Math.random().toString().charAt(4))}" alt="${data.name}">
+            <div class="card-body">
+              <h5 class="card-title text-primary-800">${data.name}</h5>
+              <p class="card-text text-primary-700">${data.description}</p>
+              <div class="d-flex justify-content-between align-items-center align-content-center">
+                <p class="my-auto h6 text-primary-600">Rp <span class="text-primary-500">${data.price}</span></p>
+                <a href="#!" class="my-auto btn btn-primary px-3">Pesan</a>
+              </div>
+            </div>
+          </div>`;
+      return node;
+    }
+
+    console.log(data)
+
+    // Favorit Data
+    data.favorit.forEach(favorit => {
+      const node = makeCard(favorit)
+      document.querySelector("#data-favorit").appendChild(node);
+    });
+
+
+    // Special Data
+    data.special.forEach(special => {
+      const node = makeCard(special)
+      document.querySelector("#data-special").appendChild(node);
+    });
+
+
+
+    // Combo Data
+    data.combo.forEach(combo => {
+      const node = makeCard(combo)
+      document.querySelector("#data-combo").appendChild(node);
+    });
+
+
+    // Best Seller Data
+    data.bestSeller.forEach(bestSeller => {
+      const node = makeCard(bestSeller)
+      document.querySelector("#data-best-seller").appendChild(node);
+    });
+
+    // Food Data
+    data.food.forEach(food => {
+      const node = makeCard(food)
+      document.querySelector("#data-food").appendChild(node);
+    });
+
+    // Drink Data
+    data.drink.forEach(drink => {
+      const node = makeCard(drink)
+      document.querySelector("#data-drink").appendChild(node);
+    });
+
+    sectionLists.forEach(section => {
+      const btn = document.createElement("btn")
+      btn.classList.add("btn", "btn-primary", "mx-auto", "mt-4")
+      btn.setAttribute("onclick", `dummyReplace("#data-${section}")`)
+      btn.innerText = "Muat Lebih Banyak"
+      document.querySelector(`#${section}`).appendChild(btn);
+    });
+
+
+
+    const dummyReplace = (id) => {
+      id = id.replace("#data-", "")
+      const node = document.querySelector(`#${id}`)
+      // node.querySelector("div").innerHTML = "";
+      if (id == "best-seller") id = "bestSeller";
+
+      data[id].forEach(data => {
+        const nodeCard = makeCard(data, true)
+        node.querySelector("div").appendChild(nodeCard);
+      });
+    }
+
+  </script>
+  <script src="/js/utils.js" type="text/javascript"></script>
 </body>
 
 </html>

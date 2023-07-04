@@ -1,8 +1,32 @@
-// Import all of Bootstrap's CSS
-@import "bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/functions";
+// @import "bootstrap/scss/functions";
+@import "variables";
+@import "variables/navbar";
+
+@import "~bootstrap/scss/bootstrap";
+@import "mixin";
+@import "class/navbar";
+@import "class/button";
+@import "class/card";
+
+body {
+    background-image: url("/assets/img/bg-body-reverse.jpg");
+    font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: $primary-700;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+// main {
+//     @extend .min-vh-100;
+// }
 
 .font-poppins {
-    font-family: 'Poppins','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.font-medium {
+    font-weight: 500;
 }
 
 .font-semibold {
@@ -11,4 +35,292 @@
 
 .font-bold {
     font-weight: 700;
+}
+
+.mt-5s {
+    margin-top: 5%;
+}
+
+.mt-10s {
+    margin-top: 10%;
+}
+
+.mt-20s {
+    margin-top: 20%;
+}
+
+.mt-30s {
+    margin-top: 30%;
+}
+
+.py-10s {
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.py-20s {
+    padding-top: 20%;
+    padding-bottom: 20%;
+}
+
+.py-30s {
+    padding-top: 30%;
+    padding-bottom: 30%;
+}
+
+.pml-12 {
+    margin-left: -12px;
+    padding-left: 12px;
+}
+
+.pmr-12 {
+    margin-right: -12px;
+    padding-right: 12px;
+}
+
+.bg-white-blur {
+    background-color: rgba(255, 255, 255, 0.8);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 10px;
+}
+
+.nav-item {
+    @extend .nav-item;
+    font-weight: 600;
+}
+
+.nav-item > a {
+    color: $gray-600;
+}
+
+.nav-item > a:hover {
+    @extend .nav-item;
+    color: $primary;
+}
+
+.navbar-nav .nav-link.active {
+    color: $primary-500;
+}
+
+.container {
+    @extend .container;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.content {
+    @extend .container;
+    padding-top: 4em;
+}
+
+.content-full {
+    padding-top: 20px;
+}
+
+.banner {
+    width: 100%;
+    height: 100%;
+    min-width: 100vw;
+    min-height: 100vh;
+    // background-color: white;
+}
+
+.gap-to-header {
+    padding-top: 70px;
+}
+
+.banner-slug {
+    position: relative;
+}
+
+.banner-slug h1 {
+    word-wrap: normal;
+    color: $primary-700;
+    font-size: 34px;
+}
+
+.banner-slug p {
+    max-width: 90%;
+    color: $primary-600;
+    font-weight: 400;
+}
+
+.bg-coffee-random {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+        url("https://source.unsplash.com/1600x900/?coffee");
+    background-size: cover;
+    background-position: center top;
+}
+
+.text-sm-16px {
+    font-size: 16px;
+}
+
+.min-vh-10 {
+    min-height: 10vh !important;
+}
+
+.min-vh-20 {
+    min-height: 20vh !important;
+}
+
+.min-vh-30 {
+    min-height: 30vh !important;
+}
+
+.min-vh-40 {
+    min-height: 40vh !important;
+}
+
+.min-vh-50 {
+    min-height: 50vh !important;
+}
+
+.min-vh-60 {
+    min-height: 60vh !important;
+}
+
+.min-vh-70 {
+    min-height: 70vh !important;
+}
+
+.min-vh-80 {
+    min-height: 80vh !important;
+}
+
+.min-vh-90 {
+    min-height: 90vh !important;
+}
+
+.min-vh-100 {
+    min-height: 100vh !important;
+}
+
+.text-xs {
+    font-size: 12px;
+}
+
+.form-label {
+    @extend .form-label;
+    color: $primary-700;
+}
+
+@include media-breakpoint-only(sm) {
+    .sm-scale-07 {
+        transform: scale(0.7);
+    }
+
+    .w-sm-full {
+        width: 100%;
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    body {
+        background-image: url("/assets/img/bg-body.jpg");
+    }
+
+    .min-vh-md-10 {
+        min-height: 10vh !important;
+    }
+
+    .min-vh-md-20 {
+        min-height: 20vh !important;
+    }
+
+    .min-vh-md-30 {
+        min-height: 30vh !important;
+    }
+
+    .min-vh-md-40 {
+        min-height: 40vh !important;
+    }
+
+    .min-vh-md-50 {
+        min-height: 50vh !important;
+    }
+
+    .min-vh-md-60 {
+        min-height: 60vh !important;
+    }
+
+    .min-vh-md-70 {
+        min-height: 70vh !important;
+    }
+
+    .min-vh-md-80 {
+        min-height: 80vh !important;
+    }
+
+    .min-vh-md-90 {
+        min-height: 90vh !important;
+    }
+
+    .min-vh-md-100 {
+        min-height: 100vh !important;
+    }
+
+    .banner-slug {
+        top: 20%;
+        position: absolute;
+    }
+
+    .banner-slug h1 {
+        word-wrap: normal;
+        color: $primary-700;
+        font-size: 70px;
+    }
+
+    .banner-slug p {
+        max-width: 50%;
+        color: $primary-600;
+        font-weight: 400;
+    }
+
+    .text-sm-22px {
+        font-size: 22px;
+    }
+
+    .mt-md-5s {
+        margin-top: 5%;
+    }
+
+    .mt-md-10s {
+        margin-top: 10%;
+    }
+
+    .mt-md-20s {
+        margin-top: 20%;
+    }
+
+    .mt-md-30s {
+        margin-top: 30%;
+    }
+
+    .w-md-50 {
+        width: 50% !important;
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: $primary-50;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: $primary-200;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: $primary-400;
 }

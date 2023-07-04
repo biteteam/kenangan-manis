@@ -34,7 +34,7 @@ pembuatan laporan final project.
 <table>
   <tbody>
     <tr>
-      <td align="center"><span>Coder</span></td>
+      <td align="center"><span>Code</span></td>
       <td align="center"><span>Report</span></td>
       <td align="center"><span>Report</span></td>
       <td align="center"><span>Presentation</span></td>

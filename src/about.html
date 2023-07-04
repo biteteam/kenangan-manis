@@ -1,54 +1,120 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kenangan Manis - Halaman XXXXX</title>
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    
-    <!-- Feather Icons -->
-    <script src="https://unpkg.com/feather-icons"></script>
 
-    <!-- BS JS -->
-    <script type="module" src="./../assets/js/main.js"></script>
-  </head>
-  <body>
-    <!-- Header -->
-    <header>
-    </header>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About - Kenangan Manis</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
-    <!-- Main Content -->
-    <main class="position-relative" style="min-height: 3000px;">
-        <!-- Main Section -->
-        <div class="mx-auto bg-primary text-center"
-        style="padding-top: 10%; padding-bottom: 10%; background-image: url('./assets/img/coffee.jpg'); background-repeat: no-repeat; background-size: cover"    
-        >
-            <!-- <div class=" bg-primary"
-            style="position: absolute; top: 0; left: padding-top: 10%; padding-bottom: 10%;"
-            ></div> -->
-            <!-- <img class="top-0 start-0position-absolute" style="top:0; z-index: -10;" src="./assets/img/coffee.jpg" alt="coffee"> -->
-            <h1 class="text-white font-poppins font-semibold">About Us</h1>
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <!-- BS JS -->
+  <script type="module" src="/js/main.js"></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar fixed-top">
+      <div class="container d-flex">
+
+        <a class="navbar-brand" href="/" aria-label="BRAND">
+          <img height="32" width="32" src="/assets/svg/brand-coloris.svg" alt="BRAND">
+          <span class="font-semibold text-primary-500">KenanganManis</span>
+        </a>
+
+        <div class="w-75 d-none d-lg-flex">
+          <div class="navbar-expand mx-auto">
+            <ul class="navbar-nav gap-4">
+              <li class="nav-item">
+                <a class="nav-link" href="/">Beranda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="product.html">Produk</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="coffee.html">Kopi Pilihan </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">Tentang Kami</a>
+              </li>
+            </ul>
+          </div>
+          <a href="login.html" class="btn btn-primary">Login</a>
         </div>
-        <!-- About Section -->
-        <div class="mx-auto bg-white"
-            style="margin-top: -60px; padding-bottom: 75px; border-top-left-radius: 40px; border-top-right-radius: 40px; z-index: 10;"
-        >
-        </div>
-        <!-- Contact Section -->
-        <div class="py-4 mx-auto">
-        </div>
-    </main>
 
-    <!-- Footer -->
-    <footer>
-    </footer>
+        <button class="navbar-toggler offcanvas-end d-sm-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <!-- Feather Icons -->
-    <script>
-      feather.replace();
-    </script>
-  </body>
+        <div class="offcanvas offcanvas-end min-vh-100" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header pb-0 mb-0">
+            <button type="button" class="btn-close position-absolute" style="right: 20px;" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <a class="navbar-brand w-25" href="/" aria-label="BRAND">
+              <img height="32" width="32" src="/assets/svg/brand-coloris.svg" alt="BRAND">
+              <span class="font-semibold text-primary-500">KenanganManis</span>
+            </a>
+          </div>
+          <div class="offcanvas-body pt-0 mt-2">
+            <a href="login.html" class="btn btn-primary w-100 my-2">Login</a>
+            <hr class="hr" />
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link" href="/">Beranda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="product.html">Produk</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="coffee.html">Kopi Pilihan</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">Tentang Kami</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="position-relative" style="min-height: 3000px;">
+    <!-- Main Section -->
+    <div class="bg-danger">
+
+      <div class="mx-auto bg-primary-400 text-center py-40s py-md-15s d-flex text-lg-center justify-content-center align-items-center bg-coffee-random">
+        <!-- <div class="mx-auto bg-primary text-center py-30s py-md-10s d-flex text-lg-center justify-content-center align-items-center"
+        style="background-image: url('https://source.unsplash.com/1600x900/?coffee'); background-repeat: no-repeat; background-size: cover; background-position: center; backdrop-filter: right: ;;"> -->
+        <!-- <div class=" bg-primary" style="position: absolute; top: 0; left: padding-top: 10%; padding-bottom: 10%;"></div> -->
+        <!-- <img class="top-0 start-0position-absolute" style="top:0; z-index: -10;" src="./assets/img/coffee.jpg" alt="coffee"> -->
+        <h1 class="text-white font-semibold">About Us</h1>
+      </div>
+    </div>
+    <!-- About Section -->
+    <div class="mx-auto bg-white" style="margin-top: -60px; padding-bottom: 75px; border-top-left-radius: 40px; border-top-right-radius: 40px; z-index: 10;">
+    </div>
+    <!-- Contact Section -->
+    <div class="py-4 mx-auto">
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+  </footer>
+
+  <!-- Feather Icons -->
+  <script>
+    feather.replace();
+  </script>
+</body>
+
 </html>

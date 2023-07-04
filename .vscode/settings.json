@@ -3,14 +3,19 @@
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "html.format.wrapAttributes": "auto",
-  "html.format.wrapLineLength": 820,
+  "html.format.wrapLineLength": 160,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.eol": "\n",
   "[html]": {
     "editor.tabSize": 2,
     "editor.defaultFormatter": "vscode.html-language-features"
   },
   "[javascript]": {
     "editor.tabSize": 4,
-    "editor.defaultFormatter": "vscode.typescript-language-features"
+    "editor.defaultFormatter": "vscode.typescript-language-features",
+    "javascript.preferences.quoteStyle": "double",
+    "javascript.autoClosingTags": true
   },
   "[css]": {
     "editor.tabSize": 4,
@@ -18,10 +23,11 @@
   },
   "[scss]": {
     "editor.tabSize": 4,
-    "editor.defaultFormatter": "vscode.css-language-features"
+    "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
   },
   "[json]": {
     "editor.tabSize": 4,
     "editor.defaultFormatter": "vscode.json-language-features"
   },
+  "liveSassCompile.settings.useNewCompiler": true
 }

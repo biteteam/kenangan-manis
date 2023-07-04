@@ -1,9 +1,12 @@
 {
   "name": "ppw-final-project",
   "version": "1.0.0",
-  "description": "A Final Project of Task School subject Pengenalan Perancangan Web",
+  "description": "A Final Project of Pengenalan Perancangan Web course",
   "scripts": {
     "start": "vite",
+    "build": "vite build",
+    "optimize": "vite optimize",
+    "preview": "vite preview",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "homepage": "https://fp-ppw-23.fiki.tech",
