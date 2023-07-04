@@ -56,6 +56,13 @@
     }
 }
 
+// font size
+@for $i from 1 through 100 {
+    .text-#{$i}px {
+        font-size: #{$i + "px"};
+    }
+}
+
 @include media-breakpoint-up(sm) {
     // padding y
     @for $i from 1 through 100 {
@@ -112,6 +119,13 @@
     @for $i from 1 through 100 {
         .opacity-md-#{$i} {
             opacity: #{$i + "%"};
+        }
+    }
+
+    // font size
+    @for $i from 1 through 100 {
+        .text-md-#{$i}px {
+            font-size: #{$i + "px"};
         }
     }
 }
