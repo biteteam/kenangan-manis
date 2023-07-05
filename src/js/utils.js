@@ -18,3 +18,20 @@ const redirect = (uri) => {
 
     window.location.href = uri;
 }
+
+
+
+// Shuffle Menu Data
+const shuffle = (data) => {
+    let currentIndex = data.length, randomIndex;
+
+    while (currentIndex != 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+
+        [data[currentIndex], data[randomIndex]] = [
+            data[randomIndex], data[currentIndex]];
+    }
+
+    return data;
+}

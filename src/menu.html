@@ -19,6 +19,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
   <link rel="manifest" href="/assets/favicon/site.webmanifest">
   <script type="module" src="/js/main.js"></script>
+  <script type="text/javascript" src="/js/utils.js"></script>
   <!-- Font Awesome Kits -->
   <script src="https://kit.fontawesome.com/ded8f6b2bd.js" crossorigin="anonymous"></script>
 </head>
@@ -152,9 +153,7 @@
 
       <section class="d-flex flex-column my-2 pb-5" id="drink">
         <h3 class="mb-3">Minuman</h3>
-        <div class="d-flex row row-cols-1 row-cols-md-4" id="data-drink">
-
-        </div>
+        <div class="d-flex row row-cols-1 row-cols-md-4" id="data-drink"></div>
       </section>
     </div>
 
@@ -249,67 +248,14 @@
     </div>
   </footer>
 
-  <script src="/js/utils.js" type="module"></script>
   <script type="text/javascript">
     //<![CDATA[
-    const data = {};
-    data["favorit"] = [
-      {
-        name: "Burger",
-        description: "The Burger",
-        image: "https://source.unsplash.com/1200x700/?burger",
-        price: "30.000"
-      }, {
-        name: "Kebab",
-        description: "The Kebab",
-        image: "https://source.unsplash.com/1200x700/?kebab",
-        price: "22.000"
-      }
-      , {
-        name: "Sosis",
-        description: "The Sosis",
-        image: "https://source.unsplash.com/1200x700/?sausage",
-        price: "12.000"
-      }, {
-        name: "Takoyaki",
-        description: "The Takoyaki",
-        image: "https://source.unsplash.com/1200x700/?takoyaki",
-        price: "42.000"
-      }, {
-        name: "Ramen",
-        description: "The Ramen Series",
-        image: "https://source.unsplash.com/1200x700/?ramen",
-        price: "27.000"
-      }, {
-        name: "Spaghetti",
-        description: "The Italiano Spaghetti",
-        image: "https://source.unsplash.com/1200x700/?spaghetti",
-        price: "64.000"
-      }, {
-        name: "Sate Kambing",
-        description: "Sate Kambing Madura",
-        image: "https://source.unsplash.com/1200x700/?sate",
-        price: "32.000"
-      }, {
-        name: "Seblak",
-        description: "Seblak Jontor",
-        image: "https://source.unsplash.com/1200x700/?seblak",
-        price: "17.000"
-      }
-    ]
-    data["special"] = data["favorit"]
-    data["combo"] = data["favorit"]
-    data["bestSeller"] = data["favorit"]
-    data["food"] = data["favorit"]
-    data["drink"] = data["favorit"]
-    const sectionLists = ["favorit", "special", "combo", "best-seller", "food", "drink"]
-
     const makeCard = (data, reRandom = false) => {
       const node = document.createElement("div");
       node.classList.add("col", "mb-4")
       node.innerHTML = `
           <div class="card w-100">
-            <img class="card-img-top" src="${data.image + (!reRandom ? "-food-" + Math.random().toString().charAt(2) : "-" + Math.random().toString().charAt(2) + Math.random().toString().charAt(4))}" alt="${data.name}">
+            <img class="card-img-top" src="${data.image + (!reRandom ? "" : "-" + Math.random().toString().charAt(2) + Math.random().toString().charAt(4))}" alt="${data.name}">
             <div class="card-body">
               <h5 class="card-title text-primary-800">${data.name}</h5>
               <p class="card-text text-primary-700">${data.description}</p>
@@ -322,46 +268,269 @@
       return node;
     }
 
-    console.log(data)
+    const data = {};
+    data["favorit"] = [
+      {
+        name: "Combo Burger",
+        description: "Combo Burger",
+        image: "https://source.unsplash.com/1200x700/?Combo+Burger",
+        price: "68.000"
+      }, {
+        name: "Croissant",
+        description: "Croissant",
+        image: "https://source.unsplash.com/1200x700/?Croissant",
+        price: "38.000"
+      }, {
+        name: "Muffin",
+        description: "Muffin",
+        image: "https://source.unsplash.com/1200x700/?Muffin",
+        price: "42.000"
+      }, {
+        name: "Matcha Latte",
+        description: "Matcha Latte Coffee",
+        image: "https://source.unsplash.com/1200x700/?matcha+latte",
+        price: "28.000"
+      }, {
+        name: "Lava Cake",
+        description: "Lava Cake",
+        image: "https://source.unsplash.com/1200x700/?Pizza",
+        price: "70.000"
+      }, {
+        name: "Salad",
+        description: "Salad",
+        image: "https://source.unsplash.com/1200x700/?Salad",
+        price: "25.000"
+      }, {
+        name: "Espresso",
+        description: "Espresso Coffee",
+        image: "https://source.unsplash.com/1200x700/?espresso",
+        price: "38.000"
+      }, {
+        name: "Cappuccino",
+        description: "Cappuccino Coffee",
+        image: "https://source.unsplash.com/1200x700/?cappuccino",
+        price: "42.000"
+      }
+    ]
+    data["special"] = [
+      {
+        name: "Tiramisu",
+        description: "Tiramisu",
+        image: "https://source.unsplash.com/1200x700/?Combo+Tiramisu",
+        price: "38.000"
+      }, {
+        name: "Pizza",
+        description: "Pizza",
+        image: "https://source.unsplash.com/1200x700/?Pizza",
+        price: "52.000"
+      }, {
+        name: "Panna Cotta",
+        description: "Panna Cotta",
+        image: "https://source.unsplash.com/1200x700/?panna+cotta",
+        price: "55.000"
+      }, {
+        name: "Lava Cake",
+        description: "Lava Cake",
+        image: "https://source.unsplash.com/1200x700/?Pizza",
+        price: "70.000"
+      }, {
+        name: "Affogato",
+        description: "Affogato",
+        image: "https://source.unsplash.com/1200x700/?Affogato",
+        price: "40.000"
+      }, {
+        name: "Lavender Latte",
+        description: "Lavender Latte",
+        image: "https://source.unsplash.com/1200x700/?lavender+latte",
+        price: "32.000"
+      }, {
+        name: "Nachos",
+        description: "Nachos",
+        image: "https://source.unsplash.com/1200x700/?nachos",
+        price: "58.000"
+      }, {
+        name: "Prosciutto",
+        description: "Prosciutto",
+        image: "https://source.unsplash.com/1200x700/?prosciutto",
+        price: "64.000"
+      },
+    ]
+    data["combo"] = [
+      {
+        name: "Combo Burger",
+        description: "Combo Burger",
+        image: "https://source.unsplash.com/1200x700/?Combo+Burger",
+        price: "68.000"
+      }, {
+        name: "Combo Sandwich",
+        description: "Combo Sandwich",
+        image: "https://source.unsplash.com/1200x700/?Sandwich",
+        price: "52.000"
+      }, {
+        name: "Combo Nachos",
+        description: "Combo Nachos",
+        image: "https://source.unsplash.com/1200x700/?Combo+Nachos",
+        price: "55.000"
+      }, {
+        name: "Combo Pizza",
+        description: "Combo Pizza",
+        image: "https://source.unsplash.com/1200x700/?Pizza",
+        price: "70.000"
+      }, {
+        name: "Combo Omelet",
+        description: "Combo Omelet",
+        image: "https://source.unsplash.com/1200x700/?Omelet",
+        price: "40.000"
+      }, {
+        name: "Combo Croissant",
+        description: "Combo Croissant",
+        image: "https://source.unsplash.com/1200x700/?Croissant",
+        price: "32.000"
+      }, {
+        name: "Combo Brownies",
+        description: "Combo Brownies",
+        image: "https://source.unsplash.com/1200x700/?Brownies",
+        price: "58.000"
+      }, {
+        name: "Combo Salad",
+        description: "Combo Salad",
+        image: "https://source.unsplash.com/1200x700/?Combo+Salad",
+        price: "64.000"
+      },
+    ]
+    data["bestSeller"] = data["favorit"]
+    data["food"] = [
+      {
+        name: "Croissant",
+        description: "Croissant",
+        image: "https://source.unsplash.com/1200x700/?Croissant",
+        price: "38.000"
+      }, {
+        name: "Muffin",
+        description: "Muffin",
+        image: "https://source.unsplash.com/1200x700/?Muffin",
+        price: "42.000"
+      }, {
+        name: "Scone",
+        description: "Scone",
+        image: "https://source.unsplash.com/1200x700/?Scone",
+        price: "45.000"
+      }, {
+        name: "Donat",
+        description: "Donat",
+        image: "https://source.unsplash.com/1200x700/?Donat",
+        price: "40.000"
+      }, {
+        name: "Cookies",
+        description: "Cookies",
+        image: "https://source.unsplash.com/1200x700/?Cookies",
+        price: "30.000"
+      }, {
+        name: "Sandwich",
+        description: "Sandwich",
+        image: "https://source.unsplash.com/1200x700/?Sandwich",
+        price: "32.000"
+      }, {
+        name: "Brownies",
+        description: "Brownies",
+        image: "https://source.unsplash.com/1200x700/?Brownies",
+        price: "28.000"
+      }, {
+        name: "Salad",
+        description: "Salad",
+        image: "https://source.unsplash.com/1200x700/?Salad",
+        price: "25.000"
+      },
+    ]
+    data["drink"] = [
+      {
+        name: "Espresso",
+        description: "Espresso Coffee",
+        image: "https://source.unsplash.com/1200x700/?espresso",
+        price: "38.000"
+      }, {
+        name: "Cappuccino",
+        description: "Cappuccino Coffee",
+        image: "https://source.unsplash.com/1200x700/?cappuccino",
+        price: "42.000"
+      }, {
+        name: "Latte",
+        description: "Latte Coffee",
+        image: "https://source.unsplash.com/1200x700/?latte",
+        price: "45.000"
+      }, {
+        name: "Americano",
+        description: "Americano Coffee",
+        image: "https://source.unsplash.com/1200x700/?americano",
+        price: "40.000"
+      }, {
+        name: "Macchiato",
+        description: "Macchiato Coffee",
+        image: "https://source.unsplash.com/1200x700/?macchiato",
+        price: "30.000"
+      }, {
+        name: "Mocha",
+        description: "Mocha Coffee",
+        image: "https://source.unsplash.com/1200x700/?mocha",
+        price: "32.000"
+      }, {
+        name: "Matcha Latte",
+        description: "Matcha Latte Coffee",
+        image: "https://source.unsplash.com/1200x700/?matcha+latte",
+        price: "28.000"
+      }, {
+        name: "Hot Chocolate",
+        description: "Hot Chocolate Coffee",
+        image: "https://source.unsplash.com/1200x700/?hot+chocolate",
+        price: "25.000"
+      }
+    ]
+    const sectionLists = ["favorit", "special", "combo", "best-seller", "food", "drink"]
 
     // Favorit Data
-    data.favorit.forEach(favorit => {
+    const favoritDom = document.querySelector("#data-favorit");
+    favoritDom && data.favorit.forEach(favorit => {
       const node = makeCard(favorit)
-      document.querySelector("#data-favorit").appendChild(node);
+      favoritDom.appendChild(node);
     });
 
 
     // Special Data
-    data.special.forEach(special => {
+    const specialDom = document.querySelector("#data-special");
+    specialDom && data.special.forEach(special => {
       const node = makeCard(special)
-      document.querySelector("#data-special").appendChild(node);
+      specialDom.appendChild(node);
     });
 
 
 
     // Combo Data
-    data.combo.forEach(combo => {
+    const comboDom = document.querySelector("#data-combo");
+    comboDom && data.combo.forEach(combo => {
       const node = makeCard(combo)
-      document.querySelector("#data-combo").appendChild(node);
+      comboDom.appendChild(node);
     });
 
 
     // Best Seller Data
-    data.bestSeller.forEach(bestSeller => {
+    const bestSellerDom = document.querySelector("#data-best-seller");
+    bestSellerDom && data.bestSeller.forEach(bestSeller => {
       const node = makeCard(bestSeller)
-      document.querySelector("#data-best-seller").appendChild(node);
+      bestSellerDom.appendChild(node);
     });
 
     // Food Data
-    data.food.forEach(food => {
+    const foodDom = document.querySelector("#data-food");
+    foodDom && data.food.forEach(food => {
       const node = makeCard(food)
-      document.querySelector("#data-food").appendChild(node);
+      foodDom.appendChild(node);
     });
 
     // Drink Data
-    data.drink.forEach(drink => {
+    const drinkDom = document.querySelector("#data-drink");
+    drinkDom && data.drink.forEach(drink => {
       const node = makeCard(drink)
-      document.querySelector("#data-drink").appendChild(node);
+      drinkDom.appendChild(node);
     });
 
     sectionLists.forEach(section => {
@@ -369,7 +538,9 @@
       btn.classList.add("btn", "btn-primary", "mx-auto", "mt-4")
       btn.setAttribute("onclick", `dummyReplace("#data-${section}")`)
       btn.innerText = "Muat Lebih Banyak"
-      document.querySelector(`#${section}`).appendChild(btn);
+
+      const sectionDom = document.querySelector(`#${section}`);
+      sectionDom && sectionDom.appendChild(btn);
     });
 
 
@@ -377,12 +548,13 @@
     const dummyReplace = (id) => {
       id = id.replace("#data-", "")
       const node = document.querySelector(`#${id}`)
-      // node.querySelector("div").innerHTML = "";
       if (id == "best-seller") id = "bestSeller";
+      console.log("oke")
 
-      data[id].forEach(data => {
+      const randData = shuffle(data[id]);
+      randData.forEach(data => {
         const nodeCard = makeCard(data, true)
-        node.querySelector("div").appendChild(nodeCard);
+        node && node.querySelector("div").appendChild(nodeCard);
       });
     }
 
