@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Product - Kenangan Manis</title>
+  <title>Menu - Kenangan Manis</title>
   <meta name="description"
     content="Memiliki kedai kopi atau restoran? Kehadiran Kamu di internet akan benar-benar membuat perbedaan! Pasarkan bisnis Kamu dan dapatkan pelanggan baru!">
   <meta name="og:title" content="Product - Kenangan Manis">
@@ -19,7 +19,6 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
   <link rel="manifest" href="/assets/favicon/site.webmanifest">
   <script type="module" src="/js/main.js"></script>
-  <script type="text/javascript" src="/js/utils.js"></script>
   <!-- Font Awesome Kits -->
   <script src="https://kit.fontawesome.com/ded8f6b2bd.js" crossorigin="anonymous"></script>
 </head>
@@ -248,6 +247,44 @@
     </div>
   </footer>
 
+  <script type="text/javascript">
+    // Hanling redirect
+    const redirect = (uri) => {
+      const index = document.querySelector(uri);
+
+      if (uri.match("#")) {
+        if (index) {
+          console.log(uri, index);
+          window.scrollTo({
+            top: (index.getBoundingClientRect().top - document.body.getBoundingClientRect().top) - 110,
+            behavior: "smooth"
+          })
+        }
+
+
+        return;
+      }
+
+      window.location.href = uri;
+    }
+
+
+
+    // Shuffle Menu Data
+    const shuffle = (data) => {
+      let currentIndex = data.length, randomIndex;
+
+      while (currentIndex != 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+
+        [data[currentIndex], data[randomIndex]] = [
+          data[randomIndex], data[currentIndex]];
+      }
+
+      return data;
+    }
+  </script>
   <script type="text/javascript">
     //<![CDATA[
     const makeCard = (data, reRandom = false) => {
@@ -562,6 +599,7 @@
 
     //]]>
   </script>
+  <script type="text/javascript" src="/js/utils.js"></script>
 </body>
 
 </html>
