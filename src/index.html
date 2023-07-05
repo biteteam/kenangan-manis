@@ -124,9 +124,62 @@
 
 
 
-    <div class="container">
+    <section class="container sm-px-0 md-px-20 pt-0 pt-md-4 mt-0 mt-md-5">
+      <div class="pb-4 text-center"
+        style="border-radius: 20px; background: linear-gradient(to right, rgba(114, 196, 203, 0.7),rgba(114, 196, 203, 0.9), rgba(114, 196, 203, 0.9))">
+        <div class="d-flex flex-row row-cols-3 row-cols-md-5 mb-4">
+          <div class="d-flex flex-column justify-content-center align-items-center">
+            <img class="w-90 w-md-50 bg-secondary-subtle p-3 sm-mt-20 -mt-md-55" style="border-radius: 30px;" height="auto"
+              src="/assets/img/food/Burger_Final.png" alt="Kategori Makanan">
+            <div class="mt-2">
+              <p class="text-white m-0 p-0 font-medium text-18px opacity-90">Senin</p>
+              <p class="text-white m-0 p-0 font-semibold text-18px">Diskon 10%</p>
+            </div>
+          </div>
+          <div class="d-flex flex-column justify-content-center align-items-center">
+            <img class="w-90 w-md-50 bg-secondary-subtle p-3 sm-mt-20 -mt-md-55" style="border-radius: 30px;" height="auto" src="/assets/img/food/HotDog.png"
+              alt="Kategori Makanan">
+            <div class="mt-2">
+              <p class="text-white m-0 p-0 font-medium text-18px opacity-90">Selasa</p>
+              <p class="text-white m-0 p-0 font-semibold text-18px">Diskon 7%</p>
+            </div>
+          </div>
+          <div class="d-none d-md-flex flex-column justify-content-center align-items-center">
+            <img class="w-90 w-md-50 bg-secondary-subtle p-3 sm-mt-20 -mt-md-55" style="border-radius: 30px;" height="auto" src="/assets/img/food/Sandwich.png"
+              alt="Kategori Makanan">
+            <div class="mt-2">
+              <p class="text-white m-0 p-0 font-medium text-18px opacity-90">Rabu</p>
+              <p class="text-white m-0 p-0 font-semibold text-18px">Diskon 4%</p>
+            </div>
+          </div>
+          <div class="d-none d-md-flex flex-column justify-content-center align-items-center">
+            <img class="w-90 w-md-50 bg-secondary-subtle p-3 sm-mt-20 -mt-md-55" style="border-radius: 30px;" height="auto" src="/assets/img/food/Fries.png"
+              alt="Kategori Makanan">
+            <div class="mt-2">
+              <p class="text-white m-0 p-0 font-medium text-18px opacity-90">Kamis</p>
+              <p class="text-white m-0 p-0 font-semibold text-18px">Diskon 2%</p>
+            </div>
+          </div>
+          <div class="d-flex flex-column justify-content-center align-items-center">
+            <img class="w-90 w-md-50 bg-secondary-subtle p-3 sm-mt-20 -mt-md-55" style="border-radius: 30px;" height="auto" src="/assets/img/food/Soda_Cup.png"
+              alt="Kategori Makanan">
+            <div class="mt-2">
+              <p class="text-white m-0 p-0 font-medium text-18px opacity-90">Jumat</p>
+              <p class="text-white m-0 p-0 font-semibold text-18px">Diskon 8%</p>
+            </div>
+          </div>
+        </div>
+        <span class="p-0 m-0 sm-py-40 text-center text-18px text-white">Dapatkan diskon menarik setiap harinya dengan terdaftar sebagai member.</span>
+      </div>
+    </section>
 
-    </div>
+
+    <section class="container my-5 py-0 py-md-5">
+      <div class="d-flex flex-column my-2 py-5" id="favorit">
+        <h3 class="mb-3 text-center mb-4 font-semibold text-primary-500">Menu Favorit</h3>
+        <div class="d-flex row row-cols-2 row-cols-md-4" id="data-favorit"></div>
+      </div>
+    </section>
 
   </main>
 
@@ -219,6 +272,80 @@
     </div>
   </footer>
 
+  <script type="text/javascript">
+    //<![CDATA[
+
+    const makeCard = (data) => {
+      const node = document.createElement("div");
+      node.classList.add("col", "mb-4")
+      node.innerHTML = `
+          <div class="card w-100" style="border-radius: 10px;">
+            <img class="card-img" style="border-top-left-radius: 10px; border-top-right-radius: 10px;" src="${data.image}" alt="${data.name}">
+            <div class="card-body">
+              <h5 class="card-title text-primary-800">${data.name}</h5>
+              <p class="card-text text-primary-700">${data.description}</p>
+              <div class="d-flex justify-content-between align-items-center align-content-center">
+                <p class="my-auto h6 text-primary-600">Rp <span class="text-primary-500">${data.price}</span></p>
+                <a href="#!" class="my-auto btn btn-primary px-3">Pesan</a>
+              </div>
+            </div>
+          </div>`;
+      return node;
+    }
+
+    const favorit = [
+      {
+        name: "Burger",
+        description: "The Burger",
+        image: "https://source.unsplash.com/1200x700/?burger",
+        price: "30.000"
+      }, {
+        name: "Kebab",
+        description: "The Kebab",
+        image: "https://source.unsplash.com/1200x700/?kebab",
+        price: "22.000"
+      }
+      , {
+        name: "Sosis",
+        description: "The Sosis",
+        image: "https://source.unsplash.com/1200x700/?sausage",
+        price: "18.000"
+      }, {
+        name: "Cappucino",
+        description: "The Cappucino",
+        image: "https://source.unsplash.com/1200x700/?cappucino",
+        price: "42.000"
+      },
+      // {
+      //   name: "Ramen",
+      //   description: "The Ramen",
+      //   image: "https://source.unsplash.com/1200x700/?ramen",
+      //   price: "27.000"
+      // }, {
+      //   name: "Spaghetti",
+      //   description: "The Spaghetti",
+      //   image: "https://source.unsplash.com/1200x700/?spaghetti",
+      //   price: "64.000"
+      // }, {
+      //   name: "Sate Kambing",
+      //   description: "Sate Madura",
+      //   image: "https://source.unsplash.com/1200x700/?sate",
+      //   price: "32.000"
+      // }, {
+      //   name: "Seblak",
+      //   description: "Seblak Jontor",
+      //   image: "https://source.unsplash.com/1200x700/?seblak",
+      //   price: "17.000"
+      // }
+    ];
+
+    favorit.forEach(favorit => {
+      const node = makeCard(favorit)
+      document.querySelector("#data-favorit").appendChild(node);
+    });
+
+    //]]>
+  </script>
 </body>
 
 </html>
